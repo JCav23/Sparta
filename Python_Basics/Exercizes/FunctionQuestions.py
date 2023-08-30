@@ -93,7 +93,16 @@ print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
 
 # A3a:
+def is_prime(num):
+    if num == 1:
+        return False
+    else:
+        for x in range(2, num):
+            if num % x == 0:
+                return False
+    return True
 
+print(is_prime(234))
 
 print("\nQ3b\n")
 # Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
