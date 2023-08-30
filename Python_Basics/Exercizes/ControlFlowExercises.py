@@ -24,7 +24,11 @@ print("\nQ1c\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1c:
-print(x[0:5])
+even_num = []
+for num in x[0:5]:
+    if num % 2 == 0:
+        even_num.append(num)
+print(even_num)
 
 # -------------------------------------------------------------------------------------- #
 
@@ -46,8 +50,10 @@ print("\nQ2b\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2b:
-
-
+space_position = []
+for name in names:
+    space_position.append(name.index(" "))
+print(space_position)
 
 
 print("\nQ2c\n")
