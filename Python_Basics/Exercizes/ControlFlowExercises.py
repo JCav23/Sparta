@@ -100,7 +100,15 @@ print("\nQ4a\n")
 # they entered
 
 # A4a:
+pick_number = True
 
+while pick_number:
+    player_choice = int(input("Please enter a number over 100: "))
+    if player_choice <= 100:
+        print("Number too low, please try again")
+    if player_choice > 100:
+        print (f"{player_choice} is over 100, you win")
+        pick_number = False
 
 print("\nQ4b\n")
 # Q4b: Continue this code and print "prime" if the number is a prime number and "not prime" otherwise
