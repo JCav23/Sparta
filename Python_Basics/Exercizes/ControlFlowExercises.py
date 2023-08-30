@@ -106,7 +106,7 @@ while pick_number:
     player_choice = int(input("Please enter a number over 100: "))
     if player_choice <= 100:
         print("Number too low, please try again")
-    if player_choice > 100:
+    elif player_choice > 100:
         print (f"{player_choice} is over 100, you win")
         pick_number = False
 
@@ -114,6 +114,36 @@ print("\nQ4b\n")
 # Q4b: Continue this code and print "prime" if the number is a prime number and "not prime" otherwise
 
 # A4b:
+pick_number = True
+
+while pick_number:
+    player_choice = int(input("Please enter a number over 100: "))
+    is_prime = True
+    if player_choice <= 100:
+        print("Number too low, please try again")
+        if player_choice == 1:
+            is_prime = False
+        elif player_choice > 1:
+            for num in range(2, player_choice):
+                if player_choice % num == 0:
+                    is_prime = False
+            if is_prime:
+                print(player_choice, "is prime")
+            else:
+                print(player_choice, "is not prime")
+    elif player_choice > 100:
+        print(f"{player_choice} is over 100, you win")
+        if player_choice > 100:
+            for num in range(2, player_choice):
+                if player_choice % num == 0:
+                    is_prime = False
+            if is_prime:
+                print(player_choice, "is prime")
+            else:
+                print(player_choice, "is not prime")
+        pick_number = False
+
+
 
 
 
