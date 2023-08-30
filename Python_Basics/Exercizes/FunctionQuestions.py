@@ -67,10 +67,10 @@ print("\nQ2b\n")
 # A2b:
 def name_score(name):
     letters = [letter_position(letter) for letter in name]
-    return ("".join(letters))
+    return "".join(letters)
 
 
-print(name_score("jack"))
+print(name_score("emily"))
 
 print("\nQ2c\n")
 # Q2c: Create a function which turns this ID into a password. The function should subtract
@@ -80,6 +80,13 @@ print("\nQ2c\n")
 # A2c:
 
 
+def password_generate(name):
+    digits = [int(num) for num in name_score(name)]
+    password = int(name_score(name)) - sum(digits)
+    return password
+
+
+print(password_generate("jack"))
 # -------------------------------------------------------------------------------------- #
 
 print("\nQ3a\n")
