@@ -4,7 +4,14 @@ print("\nQ1a\n")
 # hint: range(1, n) returns a collection of the numbers from 1 to n-1
 
 # A1a:
+def find_divisors(number):
+    divisors = []
+    for n in range(1, number):
+        if number % n == 0:
+            divisors.append(n)
+    return divisors
 
+print(find_divisors(32))
 
 
 print("\nQ1b\n")
