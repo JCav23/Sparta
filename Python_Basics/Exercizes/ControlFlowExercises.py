@@ -34,8 +34,10 @@ print("\nQ2a\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2a:
-
-
+letters = []
+for name in names:
+    letters.append(name[0])
+print(letters)
 
 
 print("\nQ2b\n")
