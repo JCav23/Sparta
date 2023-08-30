@@ -11,7 +11,9 @@ print("\nQ1b\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1b:
-
+for num in x:
+    if num % 2 == 0:
+        print(num)
 
 
 print("\nQ1c\n")
