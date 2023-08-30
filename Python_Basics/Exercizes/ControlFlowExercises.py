@@ -3,7 +3,8 @@ print("\nQ1a\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1a:
-print(x[0:5])
+x_asc = sorted(x)
+print(x_asc[0:5])
 
 
 print("\nQ1b\n")
@@ -11,9 +12,11 @@ print("\nQ1b\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1b:
+even_num = []
 for num in x:
     if num % 2 == 0:
-        print(num)
+        even_num.append(num)
+print(even_num)
 
 
 print("\nQ1c\n")
@@ -21,7 +24,7 @@ print("\nQ1c\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1c:
-
+print(x[0:5])
 
 # -------------------------------------------------------------------------------------- #
 
