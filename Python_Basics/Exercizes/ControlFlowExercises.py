@@ -78,6 +78,18 @@ list_of_lists = [[1,5,7,3,44,4,1],
 
 
 # A3a:
+set_list = []
+for l in list_of_lists:
+    set_list.append(set(l))
+
+no_duplicates = []
+for s in set_list:
+    len(s)
+    for l in list_of_lists:
+        if len(s) == len(l):
+            no_duplicates.append(l)
+
+print(no_duplicates)
 
 
 # -------------------------------------------------------------------------------------- #
