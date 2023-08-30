@@ -61,7 +61,10 @@ print("\nQ2c\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2c:
-
+initials = []
+for name in names:
+    initials.append(name[0] + ". " + name[name.index(" ")+1])
+print(initials)
 
 # -------------------------------------------------------------------------------------- #
 
