@@ -44,6 +44,7 @@ print("\nQ2a\n")
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
 
+
 # A2a:
 def letter_position(letter):
     if type(letter) != type("string"):
@@ -51,17 +52,25 @@ def letter_position(letter):
     elif len(letter) > 1:
         print("Error Input Must Only Be Single Letter")
     else:
-        return alphabet.index(letter)+1
+        return str(alphabet.index(letter) + 1)
+
 
 print(letter_position("r"))
 
 print("\nQ2b\n")
+
+
 # Q2b: create a function which takes a persons name as an input string and returns an
 # ID number consisting of the positions of each letter in the name
 # e.g. f("bob") = "1141" as "b" is in position 1 and "o" is in position 14
 
 # A2b:
+def name_score(name):
+    letters = [letter_position(letter) for letter in name]
+    return ("".join(letters))
 
+
+print(name_score("jack"))
 
 print("\nQ2c\n")
 # Q2c: Create a function which turns this ID into a password. The function should subtract
