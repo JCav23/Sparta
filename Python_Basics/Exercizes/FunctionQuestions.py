@@ -109,5 +109,17 @@ print("\nQ3b\n")
 
 # A3b:
 
+def is_prime(num):
+    if type(num) == type("number"):
+        print("Error: Input must be a Number")
+    elif num == 1:
+        return False
+    else:
+        for x in range(2, num):
+            if num % x == 0:
+                return False
+        return True
+
+print(is_prime(26))
 
 # -------------------------------------------------------------------------------------- #
