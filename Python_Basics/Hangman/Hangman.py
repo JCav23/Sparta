@@ -9,6 +9,7 @@ alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
 word_list = ["cinema", "table", "haberdashery", "jumble", "sparta", "hangman"]
 
+
 def hangman():
     word = random.choice(word_list)
     word_guess = []
@@ -28,7 +29,6 @@ def hangman():
                     word_guess.__setitem__(i, letter_choice)
                     print(letter_choice)
                     print(word_guess)
-                    print(word)
                 else:
                     continue
             print(f"You have picked {letters_guessed}")
@@ -41,4 +41,7 @@ def hangman():
         if word == string_guess:
             game_active = False
             print("congratulations you win!")
+        if lives <= 0:
+            game_active = False
+            print("Game over! You are out of lives.")
 hangman()
