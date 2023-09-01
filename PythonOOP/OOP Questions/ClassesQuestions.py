@@ -1,7 +1,7 @@
 print("\nQ1a\n")
 
 
-# Q1a: Create a class which of a country (include continent, climate, language etc in the inputs)
+# Q1a: Create a class which of a country (include continent, climate, language etc. in the inputs)
 
 # A1a:
 class Country(object):
@@ -35,34 +35,42 @@ class City(Country):
 
 # -------------------------------------------------------------------------------------- #
 
-# print("\nQ2a\n")
-# # Q2a: Using the predefined class and is_prime method below, loop through list_of_numbers and create
-# # a list of primes from that list
-# list_of_numbers = [1, 12, 44, 53, 6, 3, 6545, 76, 32, 345, 22, 17, 19, 223, 156]
-#
-#
-# class Number:
-#     def __init__(self, integer):
-#         self.integer = integer
-#
-#     def is_prime(self):
-#         if self.integer >= 2:
-#             for x in range(2, self.integer):
-#                 if self.integer % x == 0:
-#                     return False
-#             return True
-#         else:
-#             return False
-#
-#     def divisible_by_n(self, n):
-#         if self.integer % n == 0:
-#             return True
-#         else:
-#             return False
-#
-# # A2a:
-#
-#
+
+print("\nQ2a\n")
+
+# Q2a: Using the predefined class and is_prime method below, loop through list_of_numbers and create
+# a list of primes from that list
+list_of_numbers = [1, 12, 44, 53, 6, 3, 6545, 76, 32, 345, 22, 17, 19, 223, 156]
+
+
+class Number:
+    def __init__(self, integer):
+        self.integer = integer
+
+    def is_prime(self):
+        if self.integer >= 2:
+            for x in range(2, self.integer):
+                if self.integer % x == 0:
+                    return False
+            return True
+        else:
+            return False
+
+    def divisible_by_n(self, n):
+        if self.integer % n == 0:
+            return True
+        else:
+            return False
+
+
+# A2a:
+new_list = []
+for num in list_of_numbers:
+    if Number(num).is_prime():
+        new_list.append(num)
+
+print(new_list)
+
 # print("\nQ2b\n")
 # # Q2b: Now create a list of numbers from list_of_numbers that are divisible
 # # by both 3 and 4 using the divisible_by_n method above
