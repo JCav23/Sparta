@@ -64,53 +64,58 @@ class Number:
 
 
 # A2a:
+# new_list = []
+# for num in list_of_numbers:
+#     if Number(num).is_prime():
+#         new_list.append(num)
+#
+# print(new_list)
+
+print("\nQ2b\n")
+# Q2b: Now create a list of numbers from list_of_numbers that are divisible
+# by both 3 and 4 using the divisible_by_n method above
+
+# A2b:
 new_list = []
 for num in list_of_numbers:
-    if Number(num).is_prime():
+    if Number(num).divisible_by_n(3) and Number(num).divisible_by_n(4):
         new_list.append(num)
 
 print(new_list)
 
-# print("\nQ2b\n")
-# # Q2b: Now create a list of numbers from list_of_numbers that are divisible
-# # by both 3 and 4 using the divisible_by_n method above
+# -------------------------------------------------------------------------------------- #
+
+print("\nQ3a\n")
+# Q3a: Fix the following class and subclass (uncomment by selecting all rows and pressing CTRL + /)
+
+
+# class Boss(object):
+#     def __init__(self, name, attitude, behaviour, face):
+#         name = name
+#         attitude = attitude
+#         behaviour = behaviour
+#         face = face
 #
-# # A2b:
+#     def get_attitude(self):
+#         return attitude
 #
+#     def get_behaviour(self):
+#         return behaviour
 #
-# # -------------------------------------------------------------------------------------- #
-#
-# print("\nQ3a\n")
-# # Q3a: Fix the following class and subclass (uncomment by selecting all rows and pressing CTRL + /)
-#
-#
-# # class Boss(object):
-# #     def __init__(self, name, attitude, behaviour, face):
-# #         name = name
-# #         attitude = attitude
-# #         behaviour = behaviour
-# #         face = face
-# #
-# #     def get_attitude(self):
-# #         return attitude
-# #
-# #     def get_behaviour(self):
-# #         return behaviour
-# #
-# #     def get_face(self):
-# #         return face
-# #
-# #
-# # class GoodBoss(Boss):
-# #     def __init__(self, name, attitude, behaviour, face):
-# #         super()
-# #
-# #    def encourage(self):
-# #        print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
+#     def get_face(self):
+#         return face
 #
 #
-# # A3a:
+# class GoodBoss(Boss):
+#     def __init__(self, name, attitude, behaviour, face):
+#         super()
 #
-#
-# # -------------------------------------------------------------------------------------- #
-#
+#    def encourage(self):
+#        print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
+
+
+# A3a:
+
+
+# -------------------------------------------------------------------------------------- #
+
