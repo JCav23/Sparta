@@ -1,4 +1,6 @@
 print("\nQ1a\n")
+
+
 # Q1a: Create a class which of a country (include continent, climate, language etc in the inputs)
 
 # A1a:
@@ -18,15 +20,18 @@ class Country(object):
         return self.climate
 
 
-c1 = Country( "Europe", "Mild", "English")
+c1 = Country("Europe", "Mild", "English")
 print(c1.get_continent())
 
-
-
 print("\nQ1b\n")
+
+
 # Q1b: Create a subclass of a city which inherits from the country class
 
 # A1b:
+class City(Country):
+    def __init__(self, continent, climate, language):
+        super().__init__(continent, climate, language)
 
 # -------------------------------------------------------------------------------------- #
 
@@ -101,8 +106,3 @@ print("\nQ1b\n")
 #
 # # -------------------------------------------------------------------------------------- #
 #
-
-
-
-
-
