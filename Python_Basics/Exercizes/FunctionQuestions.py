@@ -70,7 +70,7 @@ def name_score(name):
     return "".join(letters)
 
 
-print(name_score("emily"))
+print(name_score("jack"))
 
 print("\nQ2c\n")
 # Q2c: Create a function which turns this ID into a password. The function should subtract
