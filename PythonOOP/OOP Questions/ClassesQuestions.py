@@ -30,8 +30,9 @@ print("\nQ1b\n")
 
 # A1b:
 class City(Country):
-    def __init__(self, continent, climate, language):
+    def __init__(self, country, continent, climate, language):
         super().__init__(continent, climate, language)
+        self.country = country
 
 # -------------------------------------------------------------------------------------- #
 
