@@ -14,12 +14,15 @@ def transform_user_details(csv_file_name):
 
     return new_user_data
 
+
 print(transform_user_details("user_details.csv"))
+
 
 def create_new_user_details(old_file_name="user_details.csv", new_file_name="new_user_details.csv"):
     new_user_data = transform_user_details(old_file_name)
     with open(new_file_name, "w", newline='') as new_file:
         csv_writer = csv.writer(new_file)
         csv_writer.writerows(new_user_data)
+
 
 create_new_user_details()
