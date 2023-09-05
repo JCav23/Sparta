@@ -89,9 +89,47 @@ JSON (***JavaScript Object Notation***) is an open standard file format and data
 
 
 
+## Section Three - REST Concepts
 
+#### What is an API?
+A Mechanism which allows two computer programs to communicate with each other
+- **A**pplication
+- **P**rogramming
+- **I**nterface 
 
+#### What is REST?
+Representational State Transfer, is an architectural style. It is not a standard, or an implementation technology. It is an approach for developing APIs. RESTful is also a common phrase meaning the service complies with the REST architectural style
 
+#### Why is REST so popular?
+- Call from JavaScript in web pages
+- Call from mobile apps to get data
+- General integration of applications
+	- Wide support for HTTP in programming languages
+	- JSON is a text-based transfer format
+	- Wide support for JSON in programming languages
+	- Wide support for development of REST APIs in many languages
 
+#### What are the constraints of REST?
+- Client-server architecture
+- **Statelessness** - No client specific state information stored on server side. HTTP is inherently stateless anyway. With RESTful all information is included in the request already
+- Cacheability 
+- **Layered system** - Clear seperation between the different elements within the REST API system. 
+- Uniform Interface
+	- Resource identification in requests, data format transferred not the same as storage
+	- Resource manipulation through representations
+	- Self-descriptive messages
+	- Hypermedia as the engine of application state
+
+#### Typical REST technologies
+- Message exchange
+	- HTTP
+- Describing the location, actions and target
+	- URIs - Uniform Resource Identifier
+	- HTTP methods
+- Representing the data
+	- JSON - most commonly
+	- XML or HTML - possibly, less frequent
+- Describing the service
+	- Swagger/OpenAPI
 
 
