@@ -133,3 +133,48 @@ Representational State Transfer, is an architectural style. It is not a standard
 	- Swagger/OpenAPI
 
 
+
+## Section Four - REST Implementation
+
+#### What is CRUD?
+- "CRUD" describes how we often access data
+	- **C** - Create
+		- Insert a new record into the data store
+	- **R** - Read
+		- Read an existing record or records from the data store
+	- **U** - Update
+		- Modify an existing record in the data store
+	- **D** - Delete
+		- Remove an existing record from the data store
+- REST API is often just CRUD using HTTP/JSON
+
+#### REST Endpoints
+
+***Example:*** https://swapi.dev/api/films/1
+<br>
+- HTTPS:/ - Using HTTPS for security
+- /SWAPI.DEV - The site hosting the API
+- /API - This is the API (maybe other services are available)
+- /FILMS - This is the collection of films
+- /1 - We're interested in film id 1 
+
+
+#### How does CRUD relate to REST?
+
+| **CRUD Operation** | **Entity already exists** | **Entity doesn't already exist** |
+|CREATE|ERROR|POST or PUT|
+|READ|GET|ERROR|
+|UPDATE|PUT or PATCH|ERROR|
+|DELETE|DELETE|ERROR|
+
+
+
+
+
+
+
+
+
+
+
+
