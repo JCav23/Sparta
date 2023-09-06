@@ -162,10 +162,11 @@ Representational State Transfer, is an architectural style. It is not a standard
 #### How does CRUD relate to REST?
 
 | **CRUD Operation** | **Entity already exists** | **Entity doesn't already exist** |
-|CREATE|ERROR|POST or PUT|
-|READ|GET|ERROR|
-|UPDATE|PUT or PATCH|ERROR|
-|DELETE|DELETE|ERROR|
+| :----------------: | :-----------------------: | :------------------------------: |
+|    CREATE 	 |    	ERROR 		 | 	POST or PUT 		|
+|     READ 	 |  	GET		 |   	ERROR			|
+|    UPDATE 	 |    PUT or PATCH 	 | 	ERROR 			|
+|    DELETE  	 |      DELETE           |      ERROR 	                |
 
 
 
