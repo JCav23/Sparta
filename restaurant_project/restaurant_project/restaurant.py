@@ -32,3 +32,13 @@ class Table:
             subtotal += (self.bill[bill_item]['price'] * self.bill[bill_item]['quantity'])
         return subtotal
 
+    def get_total(self, service_percent=0.10):
+        subtotal = round(self.get_subtotal(), 2)
+        service_charge = round((subtotal * service_percent), 2)
+        total = round((subtotal + service_charge), 2)
+        total = {'Sub Total': f'£{subtotal}', 'Service Charge': f'£{service_charge}', 'Total': f'£{total}'}
+        return total
+
+    def split_bill(self):
+        each_pay = round((self.get_subtotal() / self.diners), 2)
+        return f'Total per head {each_pay}'
