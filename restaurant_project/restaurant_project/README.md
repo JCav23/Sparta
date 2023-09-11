@@ -5,4 +5,8 @@ Complete the `Table` class in `restaurant.py`. It should be able to instantiate 
 - A `remove` method, that is similar to the `order` method but instead subtracts the quantity from the item in the bill with the matching item and price.  If this would reduce the quantity to zero, the item should be removed from the bill entirely.  The method should return `True` unless there is not an item with the corresponding item name and price (or the corresponding item has a quantity less than the quantity desired for removal), in which case it should return `False` and make no change to the bill.
 - A `get_subtotal` method that returns the total cost for the table based on the prices and quantities in the bill.
 - A `get_total` method that accepts a service charge percentage in the form of a decimal.  If no service charge percentage is provided, it should default to 10% (i.e. `0.10`).  This method should return a dictionary with the following keys: `Sub Total`, `Service Charge`, `Total`.  The values should be string representations of the corresponding prices in British pounds and pence.  e.g. `{"Sub Total": "£120.00", "Service Charge": "£12.00", "Total": "£132.00"}`
-- A `split_bill` method, which returns the the subtotal cost of the bill divided by the number of diners as a float rounded up to the nearest penny.
+- A `split_bill` method, which returns the subtotal cost of the bill divided by the number of diners as a float rounded up to the nearest penny.
+
+
+### Link to my Trello Kanban for this project
+https://trello.com/b/vLqElMXj/restaurantproject

@@ -1,2 +1,2 @@
-class Table:
-    pass
+class Table(object):
+    def __init__(self, ):
