@@ -3,7 +3,7 @@ class Table:
         self.diners = diners
         self.bill = []
 
-    def order(self, item=str, price=float, quantity=(int, 1)):
+    def order(self, item=str, price=float, quantity= 1):
         if len(self.bill) == 0:
             self.bill.append({'item': item, 'price': price, 'quantity': quantity})
         else:
@@ -15,7 +15,7 @@ class Table:
             if not ordered:
                 self.bill.append({'item': item, 'price': price, 'quantity': quantity})
 
-    def remove(self, item=str, price=float, quantity=(int, 1)):
+    def remove(self, item=str, price=float, quantity= 1):
         ordered = False
         for bill_item in range(len(self.bill)):
             if self.bill[bill_item]['item'] == item and self.bill[bill_item]['price'] == price:
@@ -36,9 +36,9 @@ class Table:
         subtotal = round(self.get_subtotal(), 2)
         service_charge = round((subtotal * service_percent), 2)
         total = round((subtotal + service_charge), 2)
-        total = {'Sub Total': f'£{subtotal}', 'Service Charge': f'£{service_charge}', 'Total': f'£{total}'}
+        total = {'Sub Total': f'£{subtotal:.2f}', 'Service Charge': f'£{service_charge:.2f}', 'Total': f'£{total:.2f}'}
         return total
 
     def split_bill(self):
         each_pay = round((self.get_subtotal() / self.diners), 2)
-        return f'Total per head {each_pay}'
+        return each_pay
