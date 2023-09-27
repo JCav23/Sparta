@@ -23,8 +23,8 @@ fish_market_data = pd.concat(frame_list)
 fish_averages = fish_market_data.groupby('Species').mean()
 print(fish_averages)
 
-str_buffer = io.StringIO()
-fish_averages.to_csv(str_buffer)
-s3_client.put_object(Body=str_buffer.getvalue(),
-                     Bucket=bucket_name,
-                     Key='Data249/fish/jack.csv')
+# str_buffer = io.StringIO()
+# fish_averages.to_csv(str_buffer)
+# s3_client.put_object(Body=str_buffer.getvalue(),
+#                      Bucket=bucket_name,
+#                      Key='Data249/fish/jack.csv')
