@@ -42,3 +42,10 @@
 
 ### ILLUSTRATE
 - Used to review how some data is transformed through a sequence of Pig Latin Statements. Allows to test your programs on small datasets and get faster turnaround times.
+
+ppl_raw = LOAD 'people.csv' USING PigStorage(',') AS (BusinessEntityID: int, PersonType: chararray, NameStyle: int, Title: chararray, FirstName: chararray, MiddleName: chararray, LastName: chararray);
+ppl_data = FILTER ppl_raw BY BusinessEntityID IS NOT NULL;
+emp = FILTER ppl_data BY PersonType == 'EM' OR PersonType == 'SP';
+
+names = FOREACH emp GENERATE CONCAT(SUBSTRING(FirstName,0,1), '. ', (MiddleName == 'NULL' ? '' : CONCAT(SUBSTRING(MiddleName,0,1), '. ')), LastName) AS Name;
+STORE names INTO EmployeeNames
